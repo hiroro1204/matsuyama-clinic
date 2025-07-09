@@ -730,7 +730,7 @@ layout > header > menu
   display: inline-block;
   width: 100%;
   height: 20rem;
-  mask-image: url("../../img/icon_button-arrow.svg");
+  mask-image: url("../img/icon_button-arrow.svg");
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -1180,7 +1180,7 @@ page > top > top-news
   display: inline-block;
   width: 7rem;
   height: 12rem;
-  mask-image: url("../../../img/icon_button-arrow.svg");
+  mask-image: url("../img/icon_button-arrow.svg");
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -1362,7 +1362,7 @@ page > top > top-greeting
   display: inline-block;
   width: 7rem;
   height: 12rem;
-  mask-image: url("../../../img/icon_button-arrow.svg");
+  mask-image: url("../img/icon_button-arrow.svg");
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -1701,7 +1701,7 @@ page > top > top-interview
   display: inline-block;
   width: 7rem;
   height: 12rem;
-  mask-image: url("../../../img/icon_button-arrow.svg");
+  mask-image: url("../img/icon_button-arrow.svg");
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -1805,7 +1805,7 @@ page > top > top-entry
   width: 11.5rem;
   height: 20rem;
   margin-left: 80rem;
-  mask-image: url("../../../img/icon_button-arrow.svg");
+  mask-image: url("../img/icon_button-arrow.svg");
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: center;
