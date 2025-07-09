@@ -1,0 +1,197 @@
+@use "../global" as g;
+
+/*!
+layout > footer
+------------------------------
+*/
+.l-footer {
+  padding-block: 56rem;
+  background-color: var(--color-white);
+  display: grid;
+  gap: 56rem;
+
+  @include g.mq(md) {
+    background-color: var(--color-bg-base);
+  }
+}
+
+.l-footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40rem;
+
+  @include g.mq(md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.l-footer-logo {
+  width: 152.28rem;
+  height: 36rem;
+
+  @include g.mq(md) {
+    width: 283rem;
+    height: 40.69rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.l-footer-nav-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32rem;
+
+  @include g.mq(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.l-footer-nav-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16rem 32rem;
+}
+
+.l-footer-nav-item {
+  font-size: 16rem;
+  font-weight: bold;
+  position: relative;
+
+  &::before {
+    background: var(--color-font-base);
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform 0.15s ease-out;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+    }
+  }
+}
+
+.l-footer-button-link {
+  padding: 14rem 24rem;
+  background: var(--color-bg-gradient-light-blue);
+  border-radius: 32rem;
+  transition: filter 0.3s ease-out;
+  display: flex;
+  filter: none;
+  -webkit-filter: none;
+
+  @media (any-hover: hover) {
+    &:hover {
+      filter: brightness(1.02);
+      -webkit-filter: brightness(1.02);
+
+      .l-footer-button-link-text::after {
+        translate: 5rem 0;
+      }
+    }
+  }
+
+  &:focus {
+    filter: brightness(1.02);
+    -webkit-filter: brightness(1.02);
+
+    .l-footer-button-link-text::after {
+      translate: 5rem 0;
+    }
+  }
+}
+
+.l-footer-button-link-text {
+  display: inline-flex;
+  gap: 16rem;
+  align-items: center;
+  font-size: 14rem;
+  font-weight: bold;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 7rem;
+    height: 12rem;
+    mask-image: url("../img/icon_button-arrow.svg");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color-font-base);
+    transition: translate 0.15s ease-out;
+  }
+}
+
+.l-footer-nav-secondary {
+  display: grid;
+  gap: 22rem;
+  text-align: center;
+}
+
+.l-footer-nav-list-secondary {
+  display: flex;
+  justify-content: center;
+  gap: 30rem;
+
+  @include g.mq(md) {
+    justify-content: flex-end;
+  }
+}
+
+.l-footer-nav-item-secondary {
+  font-size: 12rem;
+  position: relative;
+
+  &::before {
+    background: var(--color-font-base);
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform 0.15s ease-out;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+    }
+  }
+}
+
+.l-footer-copyright {
+  font-family: var(--font-family-en);
+  font-size: 12rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+
+  @include g.mq(md) {
+    text-align: right;
+  }
+}

@@ -1,0 +1,53 @@
+
+// このファイルのコードのように、全てremで設定すれば、余白やフォントサイズなど、すべて可変になるように_base.scssで設定してます。ブラウザの幅を広げたり、狭めたりしてみてください。全て可変になっているはずです。
+
+// figmaのSPデザイン(380px)で、16pxであれば、コーディング時に16remと設定すればOKです。同じように、PCデザイン(1440px)で、20pxであれば、20remと設定すればOKです。(下記が例)
+// .hoge{
+//     font-size: 16rem;
+//     @include g.mq() {
+//         font-size: 20rem;
+//     }
+// }
+
+// このやり方のメリット・デメリット
+// メリット
+// - コーディング時にタブレットサイズや大きなデバイスで見た際の見た目を気にしなくて良い
+// デメリット
+// - タブレットサイズや大きなデバイスで見た際、文字サイズが小さすぎor大きすぎになる
+
+// ここでやるようなやり方を採用しているサイトの例
+// https://novasell.com/
+
+.section {
+  width: 90%;
+  max-width: 960rem;
+  margin-inline: auto;
+  padding: 100rem 0;
+}
+
+.title {
+  font-size: 24rem;
+  text-align: center;
+  font-weight: bold;
+
+  @include g.mq() {
+    font-size: 32rem;
+  }
+}
+
+.img {
+  margin-top: 16rem;
+}
+
+.button {
+  margin-top: 16rem;
+  margin-inline: auto;
+  display: block;
+  width: fit-content;
+  padding: 12rem 24rem;
+  border-radius: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-size: 16rem;
+  font-weight: bold;
+}

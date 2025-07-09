@@ -1,0 +1,44 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-kv
+------------------------------
+*/
+
+.top-kv {
+  height: 600rem;
+  background-image: url("../../../img/bg_top-kv-filter_sp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @include g.mq(md) {
+    height: 800rem;
+    background-image: url("../../../img/bg_top-kv-filter_pc.jpg");
+  }
+
+  // kvフィルター用疑似要素
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: color-mix(in srgb, #0098dc 15%, transparent);
+  // }
+}
+
+.top-kv-title {
+  width: 357rem;
+  padding-top: 243rem;
+  margin-inline: auto;
+  position: relative;
+  z-index: var(--z-index-default);
+
+  @include g.mq(md) {
+    width: 664rem;
+    padding-top: 234rem;
+  }
+}

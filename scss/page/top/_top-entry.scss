@@ -1,0 +1,126 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-entry
+------------------------------
+*/
+
+.top-entry-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--color-bg-entry);
+
+  @include g.mq(md) {
+    grid-template-columns: 1fr 560rem;
+  }
+}
+
+.top-entry-image {
+  position: relative;
+
+  img {
+    object-fit: cover;
+    aspect-ratio: 380 / 240;
+
+    @include g.mq(md) {
+      aspect-ratio: 740 / 472;
+    }
+  }
+
+  // entry-image用フィルター用疑似要素
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: color-mix(in srgb, #0098dc 15%, transparent);
+  //   z-index: var(--z-index-default);
+  // }
+}
+
+.top-entry-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  padding: 48rem 20rem;
+
+  @include g.mq(md) {
+    padding: 0 72rem;
+    justify-content: center;
+    gap: 30rem;
+  }
+}
+
+.top-entry-text {
+  line-height: 2;
+  font-size: 16rem;
+
+  span {
+    display: block;
+  }
+}
+
+.top-entry-button {
+  width: fit-content;
+  padding: 18rem 32rem 14rem;
+  background: var(--color-bg-gradient-blue);
+  border-radius: 56rem;
+  font-size: 16rem;
+  transition: filter 0.3s ease-out;
+  filter: none;
+  -webkit-filter: none;
+
+  @media (any-hover: hover) {
+    &:hover {
+      filter: brightness(1.1);
+      -webkit-filter: brightness(1.1);
+
+      .top-entry-button-text::after {
+        translate: 5rem 0;
+      }
+    }
+  }
+
+  &:focus {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+
+    .top-entry-button-text::after {
+      translate: 5rem 0;
+    }
+  }
+}
+
+.top-entry-button-text {
+  color: var(--color-white);
+  display: inline-flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 11.5rem;
+    height: 20rem;
+    margin-left: 80rem;
+    mask-image: url("../../../img/icon_button-arrow.svg");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color-white);
+    transition: translate 0.15s ease-out;
+  }
+}
+
+.top-entry-button-text-en {
+  font-family: var(--font-family-en);
+  font-size: 24rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.top-entry-button-text-ja {
+  font-size: 14rem;
+  margin-left: 8rem;
+}

@@ -1,0 +1,67 @@
+@use "../global" as g;
+
+/*!
+component > button
+------------------------------
+*/
+
+// メニューボタン
+.c-menu-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg-base);
+
+  @include g.mq(md) {
+    display: none;
+  }
+}
+
+.c-menu-button-inner {
+  display: inline-block;
+  margin: 16rem auto 11rem;
+}
+
+.c-menu-button-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20rem;
+  height: 15rem;
+  margin-inline: auto;
+}
+
+.c-menu-button-line {
+  display: block;
+  width: 20rem;
+  height: 1rem;
+  background-color: var(--color-font-base);
+}
+
+.c-menu-button-line--close {
+  &:nth-child(1) {
+    width: 23.6rem;
+    transform-origin: left;
+    rotate: 36.38deg;
+  }
+
+  &:nth-child(2) {
+    display: none;
+  }
+
+  &:nth-child(3) {
+    width: 23.6rem;
+    transform-origin: left;
+    rotate: -36.38deg;
+  }
+}
+
+.c-menu-button-text {
+  margin-top: 10rem;
+  display: block;
+  text-align: center;
+  font-family: var(--font-family-en);
+  font-size: 12rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}

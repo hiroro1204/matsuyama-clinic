@@ -1,0 +1,172 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-interview
+------------------------------
+*/
+
+.top-interview {
+  position: relative;
+  z-index: var(--z-index-default);
+}
+
+.top-interview-first-view {
+  height: 320rem;
+
+  @include g.mq(md) {
+    height: 472rem;
+  }
+}
+
+.top-interview-inner {
+  position: relative;
+  padding-block: 80rem;
+  margin-top: -40rem;
+  background: var(--color-bg-base);
+  z-index: var(--z-index-default);
+
+  @include g.mq(md) {
+    padding-block: 120rem;
+    margin-top: -80rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 464rem;
+    left: 0;
+    translate: -5% 0;
+    width: 100vw;
+    height: 204rem;
+    background-image: url("../../../img/bg_top-interview_sp.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: var(--z-index-bg);
+
+    @include g.mq(md) {
+      background-image: url("../../../img/bg_top-interview_pc.png");
+      top: 190rem;
+      height: 524rem;
+    }
+  }
+}
+
+.top-interview-title {
+  display: grid;
+  place-items: center;
+}
+
+.top-interview-list {
+  margin-top: 40rem;
+  display: grid;
+  gap: 44rem;
+
+  @include g.mq(md) {
+    grid-template-columns: repeat(2, 524rem);
+    padding-inline: 104rem;
+  }
+}
+
+.top-interview-item:last-child {
+  @include g.mq(md) {
+    margin-top: 56rem;
+  }
+}
+
+.top-interview-item-thumbnail {
+  position: relative;
+
+  img {
+    aspect-ratio: 340/254;
+    object-fit: cover;
+  }
+}
+
+.top-interview-item-copy {
+  position: absolute;
+  bottom: 16rem;
+  left: 16rem;
+  font-size: 20rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include g.mq(md) {
+    bottom: 24rem;
+    left: 24rem;
+    font-size: 22rem;
+    gap: 8rem;
+  }
+
+  span {
+    width: fit-content;
+    padding: 3rem 8rem;
+    background: var(--color-white);
+  }
+}
+
+.top-interview-link {
+  display: block;
+  width: fit-content;
+  margin: 24rem auto 0;
+  padding: 18rem 32rem;
+  border-radius: 32rem;
+  transition: filter 0.3s ease-out;
+  filter: none;
+  -webkit-filter: none;
+
+  @media (any-hover: hover) {
+    &:hover {
+      filter: brightness(1.02);
+      -webkit-filter: brightness(1.02);
+
+      .top-interview-link-text::after {
+        translate: 5rem 0;
+      }
+    }
+  }
+
+  &:focus {
+    filter: brightness(1.02);
+    -webkit-filter: brightness(1.02);
+
+    .top-interview-link-text::after {
+      translate: 5rem 0;
+    }
+  }
+}
+
+.top-interview-link-text {
+  display: flex;
+  align-items: center;
+  gap: 32rem;
+  font-size: 14rem;
+  font-weight: bold;
+
+  @include g.mq(md) {
+    font-size: 16rem;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 7rem;
+    height: 12rem;
+    mask-image: url("../../../img/icon_button-arrow.svg");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color-font-base);
+    transition: translate 0.15s ease-out;
+  }
+}
+
+.top-interview-link--blue {
+  background: var(--color-bg-gradient-light-blue);
+}
+
+.top-interview-link--green {
+  background: var(--color-bg-gradient-light-green);
+}
