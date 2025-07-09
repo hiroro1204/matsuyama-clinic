@@ -408,7 +408,8 @@ component > title
 .c-title--type3 .c-title-sub {
   grid-template-columns: 1fr auto 1fr;
 }
-.c-title--type3 .c-title-sub::before, .c-title--type3 .c-title-sub::after {
+.c-title--type3 .c-title-sub::before,
+.c-title--type3 .c-title-sub::after {
   content: "";
   display: block;
   width: 100%;
@@ -508,7 +509,7 @@ layout > header
     display: inline-block;
     width: 100%;
     height: 24rem;
-    background-image: url("../../img/icon_entry.svg");
+    background-image: url("../img/icon_entry.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -751,7 +752,7 @@ layout > header > menu
     height: 24rem;
     mask-image: none;
     background: transparent;
-    background-image: url("../../img/icon_entry.svg");
+    background-image: url("../img/icon_entry.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -996,7 +997,7 @@ page > top > top-kv
 */
 .top-kv {
   height: 600rem;
-  background-image: url("../../../img/bg_top-kv-filter_sp.jpg");
+  background-image: url("../img/bg_top-kv-filter_sp.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1005,7 +1006,7 @@ page > top > top-kv
 @media screen and (min-width: 768px) {
   .top-kv {
     height: 800rem;
-    background-image: url("../../../img/bg_top-kv-filter_pc.jpg");
+    background-image: url("../img/bg_top-kv-filter_pc.jpg");
   }
 }
 
@@ -1203,7 +1204,7 @@ page > top > top-greeting
   padding: 48rem 0 120rem;
   position: relative;
   z-index: var(--z-index-default);
-  background-image: url("../../../img/bg_top-greeting_sp.png");
+  background-image: url("../img/bg_top-greeting_sp.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 0 667rem;
@@ -1211,7 +1212,7 @@ page > top > top-greeting
 @media screen and (min-width: 768px) {
   .top-greeting {
     padding: 96rem 0 181rem;
-    background-image: url("../../../img/bg_top-greeting_pc.png");
+    background-image: url("../img/bg_top-greeting_pc.png");
     background-size: 940rem;
     background-position: 500rem 316rem;
   }
@@ -1255,7 +1256,7 @@ page > top > top-greeting
 .top-greeting-image-bg {
   width: 264.5rem;
   height: 111.64rem;
-  background-image: url("../../../img/bg_top-greeting-image.png");
+  background-image: url("../img/bg_top-greeting-image.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -1414,7 +1415,7 @@ page > top > top-feature
   position: absolute;
   top: 0;
   right: 0;
-  background-image: url("../../../img/bg_top-feature-image_sp.png");
+  background-image: url("../img/bg_top-feature-image_sp.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1424,7 +1425,7 @@ page > top > top-feature
   .top-feature-bg {
     width: 745rem;
     height: 598rem;
-    background-image: url("../../../img/bg_top-feature-image_pc.png");
+    background-image: url("../img/bg_top-feature-image_pc.png");
     top: 141rem;
     right: auto;
     left: 0;
@@ -1587,7 +1588,7 @@ page > top > top-interview
   translate: -5% 0;
   width: 100vw;
   height: 204rem;
-  background-image: url("../../../img/bg_top-interview_sp.png");
+  background-image: url("../img/bg_top-interview_sp.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1595,7 +1596,7 @@ page > top > top-interview
 }
 @media screen and (min-width: 768px) {
   .top-interview-inner::before {
-    background-image: url("../../../img/bg_top-interview_pc.png");
+    background-image: url("../img/bg_top-interview_pc.png");
     top: 190rem;
     height: 524rem;
   }
@@ -1822,4 +1823,4 @@ page > top > top-entry
 .top-entry-button-text-ja {
   font-size: 14rem;
   margin-left: 8rem;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
