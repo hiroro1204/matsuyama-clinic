@@ -1,3 +1,4 @@
-﻿# matsuyama-clinic（架空サイト）
+﻿# matsuyama-clinic（架空LP）
 
-Hello Menterで作成した課題サイトです。
+Hello Menterで作成したLPです。
+
