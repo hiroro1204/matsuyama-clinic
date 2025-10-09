@@ -24,4 +24,5 @@ HTML / SCSS / JavaScript
 ### 推奨エディターと拡張機能（Cursor / VS Code）
 
 - **Live Sass Compiler**：SCSS のリアルタイムコンパイル
-- **Prettier**：SCSS / JS / JSON 等のコード整形
+- **Prettier**：HTML / SCSS / JS / JSON 等のコード整形
+
