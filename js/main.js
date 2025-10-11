@@ -93,12 +93,3 @@ const initializeHamburgerMenu = () => {
 };
 
 initializeHamburgerMenu();
-
-console.log(
-  "hover:",
-  matchMedia("(hover: hover)").matches,
-  "any-hover:",
-  matchMedia("(any-hover: hover)").matches,
-  "pointer fine:",
-  matchMedia("(pointer: fine)").matches
-);
